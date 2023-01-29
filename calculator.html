@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator</title>
+	<script type="text/javascript">
+		function makeBlue() {
+			document.querySelector('body').style.backgroundColor ="blue";
+		}
+		function makeGreen() {
+			document.querySelector('body').style.backgroundColor ="green";
+		}
+		function makeAqua() {
+			document.querySelector('body').style.backgroundColor ="aqua";
+		}
+		function makePurple() {
+			document.querySelector('body').style.backgroundColor ="purple";
+		}
+
+		function add(){
+			document.getElementById("full").value =
+		parseFloat(document.getElementById("first").value) +
+		parseFloat(document.getElementById("second").value);
+		}
+		function subtract(){
+			document.getElementById("full").value =
+		parseFloat(document.getElementById("first").value) -
+		parseFloat(document.getElementById("second").value);
+		}
+		function multiply(){
+			document.getElementById("full").value =
+		parseFloat(document.getElementById("first").value) *
+		parseFloat(document.getElementById("second").value);
+		}
+		function divide(){
+		document.getElementById("full").value =
+		parseFloat(document.getElementById("first").value) /
+		parseFloat(document.getElementById("second").value);
+		}
+		function doSum() {
+			var start = parseInt(document.getElementById("third").value);
+			var end = parseInt(document.getElementById("fourth").value);
+			var sum = 0;
+			if (start && end){
+			for (var i = start; i <= end; i++) {
+				sum +=i;
+			}
+			document.querySelector("#sumHere").innerHTML = "The sum is: " + sum;	
+			} 
+			else {
+			document.querySelector("#sumHere").innerHTML = "provide starting and ending values";
+	}
+}
+
+		function clearValues(){
+	document.getElementById("first").value = "";
+	document.getElementById("second").value = "";
+	document.getElementById("third").value = "";
+	document.getElementById("fourth").value = "";
+	document.getElementById("full").value = "";
+	document.getElementById("sumHere").innerHTML = "";
+}
+	</script>
+</head>
+<body>
+	<h1>Choose your Background color</h1>
+	<form name="color">
+		<input type="button" value="Turn Blue" onclick="makeBlue();">
+		<input type="button" value="Turn Green" onclick="makeGreen();">
+		<input type="button" value="Turn Aqua" onclick="makeAqua();">
+		<input type="button" value="Turn Purple" onclick="makePurple();">
+	</form>
+	<h1>Calculator</h1>
+	<form>
+		<input type="text" id="first" placeholder="Enter First Number">
+		<input type="text" id="second" placeholder="Enter Second Number">
+		<input type="button" value="+" onclick="add();">
+		<input type="button" value="-" onclick="subtract();">
+		<input type="button" value="*" onclick="multiply();">
+		<input type="button" value="/" onclick="divide();">
+		<input type=text id="full"><br>
+
+	<h3> Summation Machine</h3>
+        Where would you like to start the summation? <input type=text id="third"><br>
+        Where would you like to end the summation? <input type=text id="fourth"><br>
+        <input type=button value="Here is your sum" onclick="doSum();"><br>
+        <div id="sumHere">
+        </div>
+        <input type=reset value="Clear Entries">
+      </form>
+
+</body>
+</html>
+
+
+
+
+
+
