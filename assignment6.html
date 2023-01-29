@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>welcome to the page!</title>
+  <body bgcolor = "white">
+
+</head>
+<body>
+
+<form name ="city"
+       <input type="submit" value="Submit Form"><br>
+       <input type="reset" value="Clear"><br>
+
+<h1 id="welcome"><b>Welcome to the page!</b></h1>
+
+  <h2><b>Sports fan meter</b></h2>
+  <table border="1">
+    <tr>
+      <td>
+        <label for="city">City</label>
+      </td>
+      <td>
+        <input id="city" type="text" name="City" onkeyup="updateCityText()">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="mascot">Mascot</label>
+      </td>
+      <td>
+        <input id="mascot" type="text" name="mascot" onkeyup="updateTeamText()">
+    </tr>
+    <tr>
+      <td>
+        <label for="team">Favorite team</label>
+      </td>
+      <td>
+        <input id="team" type="text" name="team">
+      </td>
+    </tr>
+  </table>
+
+
+
+  <h2><b>favorite envirment</b></h2>
+    <INPUT TYPE=CHECKBOX NAME="cold and rainy" VALUE="cold and rainy" onclick="updateCheckbox(this)"> cold and Rainy<br>
+    <INPUT TYPE=CHECKBOX NAME="Warm and dry" VALUE="warm and dry" onclick="updateCheckbox(this)"> Warm and Dry<br>
+    <INPUT TYPE=CHECKBOX NAME="Hot and Humid" VALUE="Hot and Humid" onclick="updateCheckbox(this)"> Hot and Humid<br>
+    <INPUT TYPE=CHECKBOX NAME="Windy and chilly" VALUE="windy and chilly" onclick="updateCheckbox(this)"> windy and Chilly<br>
+    <INPUT TYPE=CHECKBOX NAME="moderate and breezy" VALUE="moderate and breezy" onclick="updateCheckbox(this)"> Moderate and breezy<br>
+    <INPUT TYPE=CHECKBOX NAME="Freezing and snowy" VALUE="Freezing and snowy" onclick="updateCheckbox(this)"> Freezing and snowy<br>
+
+
+
+
+
+
+
+</form>
+<script type="text/javascript">
+function updateCityText() {
+  document.getElementById("welcome").innerHTML = 'I love ' + document.getElementById("city").value;
+}
+function updateTeamText() {
+  document.getElementById("team").value = document.getElementById("city").value + ' ' + document.getElementById("mascot").value;
+}
+function updateCheckbox(el) {
+  if(el.checked == true) {
+    alert('I like it ' + el.value + ' too!')
+  }
+}
+</script>
+</body>
+<!-- Prof. K, 11/17/2022, Assignment 05, MENU -->
+</html>
