@@ -146,9 +146,9 @@ th, td{
 <script>
 	function showResponse(){
 		var name = document.getElementById("name-input").value;
-		var age = document.getElementById("age-input").value;
+		var sportsinputs = document.getElementByName("sports-input").value;
 		var sports = [];
-		var sportsInputs = document.getElementsByName("sports-input");
+		
 
 		for (var i = 0; i < sportsInputs.length; i++) {
 			if (sportsInputs[i].checked){
@@ -159,7 +159,7 @@ th, td{
 			var response = "";
 			
 			if (name && sports.length > 0 && frequency) {
-				response = "thanks for your feedback," + name + "We have recieved your email. Your age is " + age + " and your favorite sport(s) are" + sports.join(",") + " and you watch sports" + frequency + ".";
+				response = "thanks for your feedback," + name + " and your favorite sport(s) are" + sports.join(",") + " and you watch sports" + frequency + ".";
 			}
 			else {
 				response = "Please try again:).";
